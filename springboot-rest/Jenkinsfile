@@ -1,0 +1,22 @@
+node {
+
+    def mvnHome = tool 'M3'
+
+    stage ('Checkout') {
+        checkout scm
+    }
+
+    stage ('Compile') {
+        env.DOCKER_HOST = "${dockerHost}"
+        sh "${mvnHome}/bin/mvn ${mvnFlags} clean install -DskipTests"
+    }
+
+    stage ('Test') {
+        env.DOCKER_HOST = "${dockerHost}"
+        sh "${mvnHome}/bin/mvn ${mvnFlags} test"
+    }
+
+    stage('Publish') {
+        sh "echo I am publishing"
+    }
+}
