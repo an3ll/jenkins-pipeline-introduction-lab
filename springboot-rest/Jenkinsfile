@@ -1,20 +1,21 @@
 node {
 
     def mvnHome = tool 'M3'
+    def pom = '-f springboot-rest/pom.xml'
 
     stage ('Checkout') {
         checkout scm
     }
 
     stage ('Compile') {
-        sh "${mvnHome}/bin/mvn clean install -DskipTests"
+        sh "${mvnHome}/bin/mvn clean install -DskipTests ${pom}"
     }
 
     stage ('Test') {
-        sh "${mvnHome}/bin/mvn test"
+        sh "${mvnHome}/bin/mvn test ${pom}"
     }
 
     stage('Publish') {
-        sh "echo I am publishing"
+        sh "echo I am publishing ${pom}"
     }
 }
