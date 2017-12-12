@@ -39,5 +39,6 @@ Reference the Jenkinsfile in this project and save.
 
 Run the Job!
 
-
+### If time over, try to Create your own pipeline project
+Create your own pipeline with additional steps and try to run it in jenkins.
 

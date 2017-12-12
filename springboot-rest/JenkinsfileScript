@@ -16,6 +16,6 @@ node {
     }
 
     stage('Publish') {
-        sh "echo I am publishing ${pom}"
+        sh "echo I am publishing"
     }
 }

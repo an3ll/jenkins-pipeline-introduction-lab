@@ -1,0 +1,32 @@
+pipeline {
+    agent any
+
+    environment {
+        pom = '-f springboot-rest/pom.xml'
+    }
+
+    tools {
+        maven 'M3'
+    }
+
+    stages {
+
+        stage ('Compile')  {
+            steps {
+                sh 'mvn clean install -DskipTests ' + pom
+            }
+        }
+
+        stage ('Test') {
+            steps {
+                sh 'mvn test ' + pom
+            }
+        }
+
+         stage ('Pusblish') {
+            steps {
+               sh 'echo I am publishing'
+            }
+        }
+    }
+}
