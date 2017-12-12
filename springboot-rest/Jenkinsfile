@@ -7,13 +7,11 @@ node {
     }
 
     stage ('Compile') {
-        env.DOCKER_HOST = "${dockerHost}"
-        sh "${mvnHome}/bin/mvn ${mvnFlags} clean install -DskipTests"
+        sh "${mvnHome}/bin/mvn clean install -DskipTests"
     }
 
     stage ('Test') {
-        env.DOCKER_HOST = "${dockerHost}"
-        sh "${mvnHome}/bin/mvn ${mvnFlags} test"
+        sh "${mvnHome}/bin/mvn test"
     }
 
     stage('Publish') {

@@ -28,6 +28,13 @@ Add maven and name it 'M3' and save.
 
 Go to new item and select pipeline.
 
-In 'Pipeline box, select '
+In 'Pipeline box, select pipeline script from SCM
+
+Choose git and paste the github url
+```
+https://github.com/an3ll/jenkins-pipeline-introduction-lab.git
+```
+
+
 
 
