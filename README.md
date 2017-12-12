@@ -35,6 +35,9 @@ Choose git and paste the github url
 https://github.com/an3ll/jenkins-pipeline-introduction-lab.git
 ```
 
+Reference the Jenkinsfile in this project and save.
+
+Run the Job!
 
 
 
