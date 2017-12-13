@@ -37,9 +37,10 @@ https://github.com/an3ll/jenkins-pipeline-introduction-lab.git
 
 Reference the Jenkinsfile in this project and save.
 
-Try to reference boot type of Jenkinsfiles (declarative, script)
-
 Run the Job!
+
+Try to reference both types of Jenkinsfiles (declarative, script) and compare
+the pipe build pipeline.
 
 ### If time over, try to Create your own pipeline project
 Create your own pipeline with additional steps and try to run it in jenkins.
